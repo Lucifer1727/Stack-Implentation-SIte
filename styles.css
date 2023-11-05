@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stack-container {
+    display: flex;
+    align-items: flex-start; /* Stack on the left, buttons on the right */
+}
+
+.stack {
+    background-color: #f0f0f0;
+    width: 200px;
+    max-height: 350px;
+    min-height: 250px;
+    overflow-y: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.stack-box {
+    background-color: #3498db;
+    width: 90%;
+    max-width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    animation: moveBox 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.stack-box:nth-child(odd) {
+    background-color: #5da0c7;
+}
+
+.vertistack {
+    display: flex;
+    flex-direction: column; /* Flex in the vertical direction */
+    align-items: center; /* Center content vertically */
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.animation {
+    animation: moveBox 0.5s ease-in-out;
+}
+
+@keyframes moveBox {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-55px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeBox {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
